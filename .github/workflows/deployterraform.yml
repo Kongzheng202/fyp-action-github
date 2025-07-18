@@ -75,21 +75,20 @@ jobs:
     - name: Terraform Init
       run: terraform -chdir=terraform init
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
-
+        AWS_ACCESS_KEY_ID: ${{ id=ASIAS2FCBAOFB3QFPQVC }}
+        AWS_SECRET_ACCESS_KEY: ${{ Sm7puR3ADpc+CuJxAZvqIUxULQ+KUrO75r0WCXSK }}
+       
     - name: Terraform Plan
       run: terraform -chdir=terraform plan -out=tfplan
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+        AWS_ACCESS_KEY_ID: ${{ id=ASIAS2FCBAOFB3QFPQVC }}
+        AWS_SECRET_ACCESS_KEY: ${{ Sm7puR3ADpc+CuJxAZvqIUxULQ+KUrO75r0WCXSK }}
+        
 
     - name: Terraform Apply
       run: terraform -chdir=terraform apply -auto-approve tfplan
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+        AWS_ACCESS_KEY_ID: ${{ id=ASIAS2FCBAOFB3QFPQVC }}
+        AWS_SECRET_ACCESS_KEY: ${{ Sm7puR3ADpc+CuJxAZvqIUxULQ+KUrO75r0WCXSK }}
+        
           
